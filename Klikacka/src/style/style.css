@@ -1,0 +1,28 @@
+body {
+  background-color: black;
+}
+body .all {
+  display: flex;
+}
+body .leftWrap {
+  background-color: gray;
+  margin: 3vh 2vw;
+  width: 50%;
+  height: 94vh;
+  border-radius: 10px;
+}
+body .leftWrap .coins {
+  background-color: darkgray;
+  height: 5vh;
+  margin: 1vh 1vw;
+  border-radius: 5px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+body .rightWrap {
+  margin: 3vh 2vw;
+  width: 50%;
+  height: 94vh;
+  background-color: white;
+}/*# sourceMappingURL=style.css.map */

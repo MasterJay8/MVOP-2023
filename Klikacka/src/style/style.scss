@@ -1,0 +1,34 @@
+body {
+    background-color: black;
+
+    .all {
+        display: flex;
+    }
+
+    .leftWrap {
+        background-color: gray;
+        margin: 3vh 2vw;
+        width: 50%;
+        height: 94vh;
+        border-radius: 10px;
+
+        .coins {
+            background-color: darkgray;
+            height: 5vh;
+            margin: 1vh 1vw;
+            border-radius: 5px;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .shop {}
+    }
+
+    .rightWrap {
+        margin: 3vh 2vw;
+        width: 50%;
+        height: 94vh;
+        background-color: white;
+    }
+}
