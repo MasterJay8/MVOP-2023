@@ -2,6 +2,9 @@ body {
   background-color: black;
 }
 body .all {
+  background-color: #00dbeb;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-brick-wall.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   font-family: "Roboto", sans-serif;
   display: flex;
 }
@@ -9,7 +12,6 @@ body .leftWrap {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: gray;
   margin: 1vh 0.5vw 1vh 1vw;
   width: 48vw;
   height: 98vh;
@@ -34,6 +36,7 @@ body .leftWrap .shopMenu .shopNav {
   display: flex;
 }
 body .leftWrap .shopMenu .shopNav .shop {
+  background-image: url("../img/wood.jpg");
   display: grid;
   align-content: center;
   justify-content: center;
@@ -45,19 +48,21 @@ body .leftWrap .shopMenu .shopNav .shop {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
-body .leftWrap .shopMenu .shopNav img {
+body .leftWrap .shopMenu .shopNav .shop img {
   height: 3.4vh;
 }
-body .leftWrap .shopMenu .shopNav i {
+body .leftWrap .shopMenu .shopNav .shop i {
   color: black;
   font-size: 2rem;
 }
 body .leftWrap .shopMenu .shopMain {
+  background-image: url("../img/wood.jpg");
   height: 83vh;
   border: solid 5px silver;
   border-radius: 5px;
   overflow-y: scroll;
-  background-color: black;
+  background-repeat: repeat-y;
+  background-position: center;
 }
 body .leftWrap .shopMenu .shopMain .character {
   display: flex;
@@ -74,7 +79,8 @@ body .leftWrap .shopMenu .shopMain .character .img {
   align-items: center;
 }
 body .leftWrap .shopMenu .shopMain .character .img img {
-  height: 90%;
+  max-width: 90%;
+  max-height: 90%;
   border-radius: 10px;
   border: solid 2px;
 }
@@ -88,7 +94,7 @@ body .leftWrap .shopMenu .shopMain .character .upgrade {
   width: 17%;
   border: solid 0.3rem white;
   border-radius: 5px;
-  background-color: #6e3700;
+  background-color: #854708;
   font-size: 1.5rem;
   margin: 5px;
 }

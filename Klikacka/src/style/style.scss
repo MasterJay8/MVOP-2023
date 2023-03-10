@@ -2,16 +2,20 @@ body {
     background-color: black;
 
     .all {
+        background-color: #00dbeb;
+        background-image: url("https://www.transparenttextures.com/patterns/dark-brick-wall.png");
+        /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
         font-family: 'Roboto', sans-serif;
         display: flex;
         //max-height: 100vh;
+
     }
 
     .leftWrap {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        background-color: gray;
+        //background-color: gray;
         margin: 1vh 0.5vw 1vh 1vw;
         width: 48vw;
         height: 98vh;
@@ -37,11 +41,13 @@ body {
         }
 
         .shopMenu {
+
             .shopNav {
                 display: flex;
 
 
                 .shop {
+                    background-image: url("../img/wood.jpg");
                     display: grid;
                     align-content: center;
                     justify-content: center;
@@ -52,61 +58,74 @@ body {
                     border-style: solid solid none solid;
                     border-top-right-radius: 5px;
                     border-top-left-radius: 5px;
+                    
+
+                    img {
+                        height: 3.4vh;
+                    }
+
+                    i {
+                        color: black;
+                        font-size: 2rem;
+                    }
                 }
-                img{
-                    height: 3.4vh;
-                }
-                i {
-                    color: black;
-                    font-size: 2rem;
-                }
+
 
             }
 
             .shopMain {
+                background-image: url("../img/wood.jpg");
                 height: 83vh;
                 border: solid 5px silver;
                 border-radius: 5px;
                 overflow-y: scroll;
-                background-color: black;
+                //background-color: black;
+                background-repeat: repeat-y;
+                background-position: center;
+                
 
                 .character {
                     display: flex;
                     justify-content: space-between;
                     height: 11vh;
-                    background-color:burlywood;
+                    background-color: burlywood;
                     border-radius: 10px;
                     margin-block: 5px;
 
-                    .img{
+                    .img {
                         width: 18%;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        img{
-                          //width: 6vw;
-                          height: 90%;
-                          border-radius: 10px;
-                          border: solid 2px ;
 
-                        //width: auto;
-                      }
+                        img {
+                            //width: 6vw;
+                            max-width: 90%;
+                            max-height: 90%;
+                            border-radius: 10px;
+                            border: solid 2px;
+
+                            //width: auto;
+                        }
                     }
-                    .stats{
+
+                    .stats {
                         width: 65%;
                     }
-                    .upgrade{
+
+                    .upgrade {
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         width: 17%;
                         border: solid 0.3rem white;
                         border-radius: 5px;
-                        background-color: #6e3700;
+                        background-color: #854708;
                         font-size: 1.5rem;
                         margin: 5px;
-                        i{
-                            
+
+                        i {
+
                             //border: solid 5px;
                             stroke: black;
                             stroke-width: 10px;
@@ -114,7 +133,7 @@ body {
                         }
                     }
                 }
-         
+
 
 
             }
