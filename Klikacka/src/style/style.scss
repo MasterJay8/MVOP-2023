@@ -2,33 +2,148 @@ body {
     background-color: black;
 
     .all {
+        font-family: 'Roboto', sans-serif;
         display: flex;
+        //max-height: 100vh;
     }
 
     .leftWrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         background-color: gray;
-        margin: 3vh 2vw;
-        width: 50%;
-        height: 94vh;
+        margin: 1vh 0.5vw 1vh 1vw;
+        width: 48vw;
+        height: 98vh;
         border-radius: 10px;
 
         .coins {
-            background-color: darkgray;
-            height: 5vh;
-            margin: 1vh 1vw;
-            border-radius: 5px;
-            display: grid;
+            display: flex;
             justify-content: center;
-            align-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+            height: 5vh;
+            //margin: 1vh 1vw;
+            border-radius: 5px;
+            border: solid 5px lightgrey;
+            font-size: 1.2rem;
+
+
+            i {
+                align-content: end;
+                color: goldenrod;
+            }
         }
 
-        .shop {}
+        .shopMenu {
+            .shopNav {
+                display: flex;
+
+
+                .shop {
+                    display: grid;
+                    align-content: center;
+                    justify-content: center;
+                    margin: 0px 5px 0px 5px;
+                    height: 4vh;
+                    width: 5vw;
+                    border: 3px silver;
+                    border-style: solid solid none solid;
+                    border-top-right-radius: 5px;
+                    border-top-left-radius: 5px;
+                }
+                img{
+                    height: 3.4vh;
+                }
+                i {
+                    color: black;
+                    font-size: 2rem;
+                }
+
+            }
+
+            .shopMain {
+                height: 83vh;
+                border: solid 5px silver;
+                border-radius: 5px;
+                overflow-y: scroll;
+                background-color: black;
+
+                .character {
+                    display: flex;
+                    justify-content: space-between;
+                    height: 11vh;
+                    background-color:burlywood;
+                    border-radius: 10px;
+                    margin-block: 5px;
+
+                    .img{
+                        width: 18%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img{
+                          //width: 6vw;
+                          height: 90%;
+                          border-radius: 10px;
+                          border: solid 2px ;
+
+                        //width: auto;
+                      }
+                    }
+                    .stats{
+                        width: 65%;
+                    }
+                    .upgrade{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 17%;
+                        border: solid 0.3rem white;
+                        border-radius: 5px;
+                        background-color: #6e3700;
+                        font-size: 1.5rem;
+                        margin: 5px;
+                        i{
+                            
+                            //border: solid 5px;
+                            stroke: black;
+                            stroke-width: 10px;
+                            color: goldenrod;
+                        }
+                    }
+                }
+         
+
+
+            }
+
+            ::-webkit-scrollbar {
+                width: 12px;
+                border-radius: 10px;
+            }
+
+            ::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                border-radius: 10px;
+                background-color: darkgray;
+                margin-block: 1em;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+                background-color: black;
+            }
+        }
     }
 
     .rightWrap {
-        margin: 3vh 2vw;
-        width: 50%;
-        height: 94vh;
+        margin: 1vh 1vw 1vh 0.5vw;
+        width: 48vw;
+        height: 98vh;
         background-color: white;
+        border-radius: 10px;
     }
 }
