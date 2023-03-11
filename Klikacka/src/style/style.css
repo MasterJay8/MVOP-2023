@@ -29,11 +29,11 @@ body .leftWrap .coins {
   font-size: 1.2rem;
 }
 body .leftWrap .coins i {
-  align-content: end;
   color: goldenrod;
 }
 body .leftWrap .shopMenu .shopNav {
   display: flex;
+  padding-inline: 3px;
 }
 body .leftWrap .shopMenu .shopNav .shop {
   background-image: url("../img/wood.jpg");
@@ -41,12 +41,12 @@ body .leftWrap .shopMenu .shopNav .shop {
   align-content: center;
   justify-content: center;
   margin: 0px 5px 0px 5px;
-  height: 4vh;
-  width: 5vw;
+  height: 4.3vh;
+  width: 5.5vw;
   border: 3px silver;
   border-style: solid solid none solid;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 body .leftWrap .shopMenu .shopNav .shop img {
   height: 3.4vh;
@@ -59,7 +59,7 @@ body .leftWrap .shopMenu .shopMain {
   background-image: url("../img/wood.jpg");
   height: 83vh;
   border: solid 5px silver;
-  border-radius: 5px;
+  border-radius: 10px;
   overflow-y: scroll;
   background-repeat: repeat-y;
   background-position: center;
@@ -67,10 +67,13 @@ body .leftWrap .shopMenu .shopMain {
 body .leftWrap .shopMenu .shopMain .character {
   display: flex;
   justify-content: space-between;
-  height: 11vh;
+  height: 14vh;
   background-color: burlywood;
   border-radius: 10px;
   margin-block: 5px;
+  margin-inline: 5px;
+  padding: 5px;
+  gap: 1%;
 }
 body .leftWrap .shopMenu .shopMain .character .img {
   width: 18%;
@@ -79,13 +82,21 @@ body .leftWrap .shopMenu .shopMain .character .img {
   align-items: center;
 }
 body .leftWrap .shopMenu .shopMain .character .img img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 10px;
   border: solid 2px;
 }
 body .leftWrap .shopMenu .shopMain .character .stats {
   width: 65%;
+}
+body .leftWrap .shopMenu .shopMain .character .stats .name {
+  font-size: 20px;
+  font-weight: 500;
+}
+body .leftWrap .shopMenu .shopMain .character .stats .level {
+  font-size: 15px;
+  font-weight: 400;
 }
 body .leftWrap .shopMenu .shopMain .character .upgrade {
   display: flex;
@@ -93,35 +104,33 @@ body .leftWrap .shopMenu .shopMain .character .upgrade {
   align-items: center;
   width: 17%;
   border: solid 0.3rem white;
-  border-radius: 5px;
+  border-radius: 15px;
   background-color: #854708;
   font-size: 1.5rem;
-  margin: 5px;
+  margin-block: 25px;
 }
 body .leftWrap .shopMenu .shopMain .character .upgrade i {
   stroke: black;
   stroke-width: 10px;
   color: goldenrod;
 }
-body .leftWrap .shopMenu ::-webkit-scrollbar {
-  width: 12px;
-  border-radius: 10px;
-}
 body .leftWrap .shopMenu ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  background-color: darkgray;
-  margin-block: 1em;
+  border: 5px solid white;
+  border-color: transparent;
+}
+body .leftWrap .shopMenu ::-webkit-scrollbar {
+  width: 15px;
 }
 body .leftWrap .shopMenu ::-webkit-scrollbar-thumb {
+  background-color: #74b9ff;
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: black;
 }
 body .rightWrap {
   margin: 1vh 1vw 1vh 0.5vw;
   width: 48vw;
   height: 98vh;
-  background-color: white;
   border-radius: 10px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */

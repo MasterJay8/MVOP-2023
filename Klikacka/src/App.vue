@@ -1,58 +1,76 @@
-<script setup>
+<script>
+import Character from "./components/Character.vue";
+export default {
+  components: {
+    Character,
+  },
+
+  /*data() {
+    return {
+      nameModel: "",
+    };
+  },
+
+  methods: {
+    send(name) {
+      this.$emit("changed", name);
+    },
+  },*/
+};
 </script>
 
 <template>
   <div class="all">
     <div class="leftWrap">
       <div class="coins">
-        <div>120k</div>
+        <div>120k&nbsp;</div>
         <i class="fa-solid fa-coins"></i>
       </div>
 
       <div class="shopMenu">
         <div class="shopNav">
-          <div class="shop">
+          <button class="shop">
             <i class="fa-solid fa-bowl-rice"></i>
-          </div>
+          </button>
 
-          <div class="shop">
-             <img src="/src/img/chopsticks.png" alt=""/>
-          </div>
+          <button class="shop">
+            <img src="/src/img/chopsticks.png" alt="" />
+          </button>
 
-          <div class="shop">
-            <img src="/src/img/noodle.png" alt=""/>
-          </div>
+          <button class="shop">
+            <img src="/src/img/noodle.png" alt="" />
+          </button>
         </div>
 
         <div class="shopMain">
-          <div class="character">
-            <div class="img">
-              <img src="/src/img/Peaseant.jpg" alt=""/>
-            </div>
-            <div class="stats">lv500</div>
-            <div class="upgrade">500<i class="fa-solid fa-coins"></i></div>
-          </div>
+          <Character
+            imgPath="/src/img/Peaseant.jpg"
+            name="Peaseant"
+            level="2"
+            upgradeCost="500k"
+          />
 
-                    <div class="character">
-            <div class="img">
-              <img src="/src/img/asiaGang.png" alt=""/>
-            </div>
-            <div class="stats">lv500</div>
-            <div class="upgrade">500<i class="fa-solid fa-coins"></i></div>
-          </div>
+          <Character
+            imgPath="/src/img/asiaGang.png"
+            name="Ballers"
+            level="2"
+            upgradeCost="500k"
+          />
 
-                    <div class="character">
-            <div class="img">
-              <img src="/src/img/asian3.png " alt=""/>
-            </div>
-            <div class="stats">lv500</div>
-            <div class="upgrade">500<i class="fa-solid fa-coins"></i></div>
-          </div>
-
+          <Character
+            imgPath="/src/img/asian3.png"
+            name="Min"
+            level="2"
+            upgradeCost="500k"
+          />
         </div>
       </div>
     </div>
-    <div class="rightWrap">IMG</div>
+    <div class="rightWrap">
+      <div class="clicker">
+        <img src="./img/coin.png" alt="">
+      </div>
+    </div>
   </div>
 </template>
 
