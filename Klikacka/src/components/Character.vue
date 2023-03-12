@@ -4,7 +4,9 @@ export default {
     imgPath: String,
     name: String,
     level: String,
+    dmg: String,
     upgradeCost: String,
+    dmgAdd: String,
   },
 
   methods: {},
@@ -18,10 +20,14 @@ export default {
     </div>
     <div class="stats">
       <div class="name">{{ name }}</div>
-      <div class="level">Lvl &nbsp;{{ level }}</div>
+      <div class="level">Lvl {{ level }}</div>
+      <div class="dmg">Earnings/s {{ dmg }}</div>
     </div>
     <button class="upgrade">
-      {{ upgradeCost }}&nbsp;<i class="fa-solid fa-coins"></i>
+      <div class="upgradeCost">
+        {{ upgradeCost }}&nbsp;<i class="fa-solid fa-coins"></i>
+      </div>
+      <div class="dmgAdd">+{{ dmgAdd }} Earnings/s</div>
     </button>
   </div>
 </template>

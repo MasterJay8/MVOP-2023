@@ -1,10 +1,38 @@
-body {
-  background-color: black;
-}
+/*$coinBackground:#2b5270;
+$coinBorder:#81C3D7;
+$shopBorder:#81C3D7;
+$imgBorder:#2F6690;
+$shopBackground:#3A7CA5;
+$characterBackground:#81C3D7;
+$upgradeBackground:#2F6690;
+$upgradeBorder:#16425B;
+$scrollColor:#16425B;
+
+//Right Wrap
+$skillsColor:#81C3D7;
+$skillsBackgroundColor:#16425B;
+$settingsColor:#81C3D7;
+$settingsBackgroundColor:#16425B;*/
+/*$coinBackground:#E56B6F;
+$coinBorder:#6D597A;
+$shopBorder:#E56B6F;
+$imgBorder:#EAAC8B;
+$shopBackground:#6D597A;
+$characterBackground:#E56B6F;
+$upgradeBackground:#6D597A;
+$upgradeBorder:#EAAC8B;
+$scrollColor:#EAAC8B;
+
+//Right Wrap
+$skillsColor:#EAAC8B;
+$skillsBackgroundColor:#6D597A;
+$settingsColor:#EAAC8B;
+$settingsBackgroundColor:#6D597A;*/
 body .all {
-  background-color: #00dbeb;
-  background-image: url("https://www.transparenttextures.com/patterns/dark-brick-wall.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  background-image: url("../img/background1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: "Roboto", sans-serif;
   display: flex;
 }
@@ -21,11 +49,11 @@ body .leftWrap .coins {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: #432818;
   color: white;
   height: 5vh;
   border-radius: 5px;
-  border: solid 5px lightgrey;
+  border: solid 5px #BB9457;
   font-size: 1.2rem;
 }
 body .leftWrap .coins i {
@@ -36,14 +64,14 @@ body .leftWrap .shopMenu .shopNav {
   padding-inline: 3px;
 }
 body .leftWrap .shopMenu .shopNav .shop {
-  background-image: url("../img/wood.jpg");
+  background-color: #99582A;
   display: grid;
   align-content: center;
   justify-content: center;
   margin: 0px 5px 0px 5px;
   height: 4.3vh;
   width: 5.5vw;
-  border: 3px silver;
+  border: 3px #FFE6A7;
   border-style: solid solid none solid;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -55,10 +83,17 @@ body .leftWrap .shopMenu .shopNav .shop i {
   color: black;
   font-size: 2rem;
 }
+body .leftWrap .shopMenu .shopNav .shop:active img {
+  height: 2.8vh;
+}
+body .leftWrap .shopMenu .shopNav .shop:active i {
+  color: black;
+  font-size: 1.7rem;
+}
 body .leftWrap .shopMenu .shopMain {
-  background-image: url("../img/wood.jpg");
+  background-color: #99582A;
   height: 83vh;
-  border: solid 5px silver;
+  border: solid 5px #FFE6A7;
   border-radius: 10px;
   overflow-y: scroll;
   background-repeat: repeat-y;
@@ -68,7 +103,7 @@ body .leftWrap .shopMenu .shopMain .character {
   display: flex;
   justify-content: space-between;
   height: 14vh;
-  background-color: burlywood;
+  background-color: #BB9457;
   border-radius: 10px;
   margin-block: 5px;
   margin-inline: 5px;
@@ -76,7 +111,7 @@ body .leftWrap .shopMenu .shopMain .character {
   gap: 1%;
 }
 body .leftWrap .shopMenu .shopMain .character .img {
-  width: 18%;
+  width: 19%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,10 +120,13 @@ body .leftWrap .shopMenu .shopMain .character .img img {
   max-width: 100%;
   max-height: 100%;
   border-radius: 10px;
-  border: solid 2px;
+  border: solid 2px #FFE6A7;
 }
 body .leftWrap .shopMenu .shopMain .character .stats {
-  width: 65%;
+  width: 63%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 body .leftWrap .shopMenu .shopMain .character .stats .name {
   font-size: 20px;
@@ -98,21 +136,37 @@ body .leftWrap .shopMenu .shopMain .character .stats .level {
   font-size: 15px;
   font-weight: 400;
 }
+body .leftWrap .shopMenu .shopMain .character .stats .dmg {
+  font-size: 15px;
+  font-weight: 400;
+}
 body .leftWrap .shopMenu .shopMain .character .upgrade {
+  width: 17%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 17%;
-  border: solid 0.3rem white;
+  flex-direction: column;
+  border: solid 0.3rem #FFE6A7;
   border-radius: 15px;
-  background-color: #854708;
-  font-size: 1.5rem;
+  background-color: #99582A;
   margin-block: 25px;
+  position: relative;
 }
 body .leftWrap .shopMenu .shopMain .character .upgrade i {
   stroke: black;
   stroke-width: 10px;
   color: goldenrod;
+}
+body .leftWrap .shopMenu .shopMain .character .upgrade .upgradeCost {
+  font-size: 1.5rem;
+}
+body .leftWrap .shopMenu .shopMain .character .upgrade .dmgAdd {
+  margin-top: 4.7vh;
+  position: absolute;
+  font-size: 1rem;
+}
+body .leftWrap .shopMenu .shopMain .character .upgrade:active {
+  margin-block: 30px;
 }
 body .leftWrap .shopMenu ::-webkit-scrollbar-track {
   border: 5px solid white;
@@ -122,7 +176,7 @@ body .leftWrap .shopMenu ::-webkit-scrollbar {
   width: 15px;
 }
 body .leftWrap .shopMenu ::-webkit-scrollbar-thumb {
-  background-color: #74b9ff;
+  background-color: #6F1D1B;
   border-radius: 10px;
 }
 body .rightWrap {
@@ -131,6 +185,55 @@ body .rightWrap {
   height: 98vh;
   border-radius: 10px;
   display: flex;
-  align-items: end;
+  justify-content: space-between;
+}
+body .rightWrap .skills {
+  display: flex;
+  flex-direction: column;
+  color: #FFE6A7;
+}
+body .rightWrap .skills i {
+  display: flex;
+  align-items: center;
   justify-content: center;
+  min-height: 5.2vh;
+  min-width: 5.2vh;
+  background-color: #99582A;
+  padding: 0.15rem;
+  font-size: 3rem;
+  border: solid 5px;
+  border-radius: 10px;
+  margin-block: 1vh;
+}
+body .rightWrap .skills #skill:active {
+  font-size: 2.7rem;
+}
+body .rightWrap #clicker {
+  margin-top: 45vh;
+}
+body .rightWrap img {
+  width: 100%;
+  height: 50%;
+}
+body .rightWrap img:active {
+  width: 99%;
+  height: 49.5%;
+}
+body .rightWrap .navSettings {
+  display: flex;
+  flex-direction: column;
+  color: #FFE6A7;
+}
+body .rightWrap .navSettings i {
+  background-color: #99582A;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 3rem;
+  border: solid 3px;
+  border-radius: 50%;
+  margin-block: 0.5vh;
 }/*# sourceMappingURL=style.css.map */
