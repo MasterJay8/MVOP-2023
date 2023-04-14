@@ -1,27 +1,20 @@
-<script>
+<script setup>
 import Character from "./components/Character.vue";
-export default {
+import { useCounterStore } from "./stores/store";
+const useCounter = useCounterStore();
+//const add = useCounter.addCoins;
+/*export default {
   components: {
     Character,
   },
-
-  /*data() {
-    return {
-      
-    };
-  },
-
-  methods: {
- 
-  },*/
-};
+};*/
 </script>
 
 <template>
   <div class="all">
     <div class="leftWrap">
       <div class="coins">
-        <div>157k&nbsp;</div>
+        <div>{{ useCounter.coins }}&nbsp;</div>
         <i class="fa-solid fa-coins"></i>
       </div>
 
@@ -109,7 +102,7 @@ export default {
       </div>
       <div class="clicker">
         <!-- <img id="clicker" src="./img/coin.png" alt="" /> -->
-        <img id="clicker" src="./img/ramen.png" alt="" />
+        <img id="clicker" src="./img/ramen.png" alt="" @click="useCounter.addCoins"/>
       </div>
       <div class="navSettings">
         <i class="fa-solid fa-gear"></i>
