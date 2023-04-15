@@ -1,0 +1,73 @@
+<script setup>
+import Character from "./Character.vue";
+</script>
+
+<template>
+    <div class="shopMain">
+          <Character
+            id="1"
+            imgPath="/src/img/Peaseant3.png"
+            name="Peaseant"
+            level="97"
+            dmg="55k"
+            upgradeCost="321k"
+            dmgAdd="2k"
+          />
+
+          <Character
+            id="2"
+            imgPath="/src/img/asiaGang.png"
+            name="Ballers"
+            level="82"
+            dmg="78k"
+            upgradeCost="343k"
+            dmgAdd="5k"
+          />
+
+          <Character
+            id="3"
+            imgPath="/src/img/asian3.png"
+            name="Min"
+            level="64"
+            dmg="95k"
+            upgradeCost="356k"
+            dmgAdd="8k"
+          />
+          <Character
+            id="4"
+            imgPath="/src/img/cartman.png"
+            name="Cartman"
+            level="45"
+            dmg="104k"
+            upgradeCost="387k"
+            dmgAdd="12k"
+          />
+          <Character
+            id="5"
+            imgPath="/src/img/cityguy2.png"
+            name="Cityguy"
+            level="37"
+            dmg="120k"
+            upgradeCost="398k"
+            dmgAdd="19k"
+          />
+          <Character
+            id="6"
+            imgPath="/src/img/worker.png"
+            name="Worker"
+            level="24"
+            dmg="159k"
+            upgradeCost="404k"
+            dmgAdd="24k"
+          />
+          <Character
+            id="7"
+            imgPath="/src/img/kim.png"
+            name="Kim"
+            level="5"
+            dmg="148k"
+            upgradeCost="391k"
+            dmgAdd="999k"
+          />
+        </div>
+</template>

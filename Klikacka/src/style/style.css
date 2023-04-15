@@ -216,11 +216,11 @@ body .rightWrap .clicker #clicker {
 }
 body .rightWrap .clicker img {
   width: 100%;
-  height: 50%;
+  height: auto;
 }
 body .rightWrap .clicker img:active {
   width: 99%;
-  height: 49.5%;
+  height: auto;
 }
 body .rightWrap .navSettings {
   display: flex;

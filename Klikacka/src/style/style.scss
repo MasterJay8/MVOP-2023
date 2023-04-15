@@ -237,11 +237,11 @@ body {
 
             img {
                 width: 100%;
-                height: 50%;
+                height: auto;
 
                 &:active {
                     width: 99%;
-                    height: 49.5%;
+                    height: auto;
                 }
             }
 
