@@ -65,17 +65,19 @@ body {
                         color: black;
                         font-size: 2rem;
                     }
-                }
-                .shop:active{
-                    img {
-                        height: 2.8vh;
-                    }
 
-                    i {
-                        color: black;
-                        font-size: 1.7rem;
+                    &:active {
+                        img {
+                            height: 2.8vh;
+                        }
+
+                        i {
+                            color: black;
+                            font-size: 1.7rem;
+                        }
                     }
                 }
+
 
 
             }
@@ -146,7 +148,7 @@ body {
                         border: solid 0.3rem variables.$upgradeBorder;
                         border-radius: 15px;
                         background-color: variables.$upgradeBackground;
-                        margin-block: 25px;
+                        margin-block: 2.5vh;
                         //padding-top: 1.5vh;
                         position: relative;
 
@@ -164,14 +166,15 @@ body {
                         .dmgAdd {
                             margin-top: 4.7vh;
                             position: absolute;
-                            font-size: 1rem;
+                            font-size: 0.9rem;
+                        }
+
+                        &:active {
+                            //margin-inline: 1px;
+                            margin-block: 3vh;
                         }
                     }
 
-                    .upgrade:active {
-                        //margin-inline: 1px;
-                        margin-block: 30px;
-                    }
                 }
             }
 
@@ -218,28 +221,30 @@ body {
                 border-radius: 10px;
                 margin-block: 1vh;
             }
-            #skill:active{               
-                    font-size: 2.7rem;               
-            }
-        }
-        .skills:active{
-            i{
-                //font-size: 2.7rem;
+
+            #skill:active {
+                font-size: 2.7rem;
             }
         }
 
-        #clicker {
-            margin-top: 45vh;
-        }
+        .clicker {
+            text-align: center;
 
-        img {
-            width: 100%;
-            height: 50%;
-        }
+            #clicker {
+                margin-top: 45vh;
+                //text-align: end;
+            }
 
-        img:active {
-            width: 99%;
-            height: 49.5%;
+            img {
+                width: 100%;
+                height: 50%;
+
+                &:active {
+                    width: 99%;
+                    height: 49.5%;
+                }
+            }
+
         }
 
         .navSettings {
@@ -249,16 +254,284 @@ body {
 
             i {
                 background-color: variables.$settingsBackgroundColor;
-                width: 50px;
-                height: 50px;
+                min-width: 5vh;
+                min-height: 5vh;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 padding: 10px;
-                font-size: 3rem;
+                font-size: 2.2rem;
                 border: solid 3px;
                 border-radius: 50%;
                 margin-block: 0.5vh;
+
+                &:active {
+                    font-size: 2rem;
+                }
+            }
+
+
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+    .all {
+        flex-direction: column-reverse;
+
+        .leftWrap {
+            width: 100%;
+            height: 60vh;
+            margin: 0;
+
+            .shopMenu {
+                .shopNav {
+                    .shop {
+                        width: 15vw;
+                    }
+                }
+
+                .shopMain {
+                    height: 47vh;
+
+                    .character {
+                        height: 9vh;
+                        margin-inline: 0.5vw;
+                        margin-block: 0.5vh;
+
+                        gap: 1%;
+
+                        .img {
+                            width: 19%;
+
+                            img {}
+                        }
+
+                        .stats {
+                            width: 48%;
+                            gap: 10px;
+
+                            .name {
+                                font-size: 20px;
+                                font-weight: 500;
+                            }
+
+                            .level {
+                                font-size: 15px;
+                                font-weight: 400;
+                            }
+
+                            .dmg {
+                                font-size: 15px;
+                                font-weight: 400;
+                            }
+                        }
+
+                        .upgrade {
+                            width: 31%;
+                            margin-block: 0;
+
+                            i {}
+
+                            .upgradeCost {
+
+                                font-size: 1.2rem;
+                                //font-weight: 600;
+                            }
+
+                            .dmgAdd {
+                                //position: relative;
+                                margin-top: 4vh;
+                                font-size: 0.65rem;
+                            }
+                            &:active {
+                                margin-block: 0.5vh;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .rightWrap {
+            width: 98%;
+            height: 40vh;
+            margin-block: 0;
+            margin-inline: 1%;
+
+            .skills {
+
+                i {
+                    min-height: 4.5vh;
+                    min-width: 4.5vh;
+                    padding: 0.15rem;
+                    font-size: 2rem;
+                    border: solid 5px;
+                    border-radius: 10px;
+                    margin-block: 0.5vh;
+                }
+
+                #skill:active {
+                    font-size: 1.9rem;
+                }
+            }
+            .clicker{
+                #clicker {
+                    margin-top: 15vh;
+                }
+            }
+
+
+            .navSettings {
+
+                i {
+                    min-height: 4.5vh;
+                    min-width: 4.5vh;
+                    padding: 0.15rem;
+                    font-size: 2.2rem;
+                    border: solid 3px;
+                    border-radius: 50%;
+                    margin-block: 0.5vh;
+                }
+
+                i:active {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1100px) {
+    .all {
+
+        .leftWrap {
+            width: 50%;
+            margin: 0;
+
+            .shopMenu {
+                .shopNav {
+                    .shop {
+                        width: 7vw;
+                    }
+                }
+
+                .shopMain {
+
+                    .character {
+                        height: 10vh;
+                        margin-inline: 1vw;
+                        margin-block: 1vh;
+
+                        gap: 1%;
+
+                        .img {
+                            width: 19%;
+
+                            img {}
+                        }
+
+                        .stats {
+                            width: 50%;
+                            gap: 10px;
+
+                            .name {
+                                font-size: 20px;
+                                font-weight: 500;
+                            }
+
+                            .level {
+                                font-size: 15px;
+                                font-weight: 400;
+                            }
+
+                            .dmg {
+                                font-size: 15px;
+                                font-weight: 400;
+                            }
+                        }
+
+                        .upgrade {
+                            width: 29%;
+                            margin-block: 0;
+
+                            i {}
+
+                            .upgradeCost {
+
+                                font-size: 1.2rem;
+                                //font-weight: 600;
+                            }
+
+                            .dmgAdd {
+                                //position: relative;
+                                margin-top: 4vh;
+                                font-size: 0.65rem;
+                            }
+                            &:active {
+                                margin-block: 0.5vh;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .rightWrap {
+            width: 48%;
+            margin-block: 0;
+            margin-inline: 1%;
+
+            .skills {
+
+                i {
+                    min-height: 5vh;
+                    min-width: 5vh;
+                    padding: 0.15rem;
+                    font-size: 2.2rem;
+                    border: solid 5px;
+                    border-radius: 10px;
+                    margin-block: 0.5vh;
+                }
+
+                #skill:active {
+                    font-size: 2rem;
+                }
+            }
+
+            .clicker {
+                align-self: center;
+
+                #clicker {}
+
+                img {
+                    width: 100%;
+                    height: auto;
+
+                    &:active {
+                        width: 99%;
+                        height: auto;
+                    }
+                }
+
+            }
+
+
+            .navSettings {
+
+                i {
+                    min-height: 5vh;
+                    min-width: 5vh;
+                    padding: 0.15rem;
+                    font-size: 2rem;
+                    border: solid 3px;
+                    border-radius: 50%;
+                    margin-block: 0.5vh;
+
+                    &:active {
+                        font-size: 1.8rem;
+                    }
+                }
             }
         }
     }

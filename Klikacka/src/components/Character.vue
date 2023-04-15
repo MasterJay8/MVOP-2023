@@ -8,8 +8,6 @@ export default {
     upgradeCost: String,
     dmgAdd: String,
   },
-
-  methods: {},
 };
 </script>
 
@@ -27,7 +25,7 @@ export default {
       <div class="upgradeCost">
         {{ upgradeCost }}&nbsp;<i class="fa-solid fa-coins"></i>
       </div>
-      <div class="dmgAdd">+{{ dmgAdd }} Earnings/s</div>
+      <div class="dmgAdd">+{{ dmgAdd }} Earnings</div>
     </button>
   </div>
 </template>

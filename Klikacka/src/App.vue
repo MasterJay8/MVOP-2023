@@ -90,7 +90,7 @@ const useCounter = useCounterStore();
             level="5"
             dmg="148k"
             upgradeCost="391k"
-            dmgAdd="31k"
+            dmgAdd="999k"
           />
         </div>
       </div>
