@@ -32,6 +32,7 @@ export const useCharacterStore = defineStore('character', () => {
 
     //const character = ref(useLocalStorage("character", Array))
     //let character = ref({[]})
+    //let character = ref(useLocalStorage("Character", []))
     let character = ref([])
 
     character.value.push({
@@ -40,8 +41,8 @@ export const useCharacterStore = defineStore('character', () => {
         name: "Peaseant",
         level: 0,
         earn: 0,
-        baseUpgradeCost: 2,
-        upgradeCost: 1,
+        baseUpgradeCost: 10,
+        upgradeCost: 10,
         earnAdd: 1
     })
     character.value.push({
@@ -50,19 +51,19 @@ export const useCharacterStore = defineStore('character', () => {
         name:"Ballers",
         level:0,
         earn:0,
-        baseUpgradeCost: 10,
-        upgradeCost:10,
-        earnAdd:12
+        baseUpgradeCost: 100,
+        upgradeCost:100,
+        earnAdd:15
     })
     character.value.push({
         id:3,
         imgPath:"/src/img/asian3.png",
         name:"Min",
-        level:64,
+        level:0,
         earn: 0,
-        baseUpgradeCost: 10,
-        upgradeCost:0,
-        earnAdd:0
+        baseUpgradeCost: 500,
+        upgradeCost:500,
+        earnAdd:100
     })
     character.value.push({
         id:4,
@@ -70,9 +71,9 @@ export const useCharacterStore = defineStore('character', () => {
         name:"Cartman",
         level:0,
         earn:0,
-        baseUpgradeCost: 10,
-        upgradeCost:0,
-        earnAdd:0
+        baseUpgradeCost: 1500,
+        upgradeCost:1500,
+        earnAdd:375
     })
     character.value.push({
         id:5,
@@ -80,9 +81,9 @@ export const useCharacterStore = defineStore('character', () => {
         name:"Cityguy",
         level:0,
         earn:0,
-        baseUpgradeCost: 10,
-        upgradeCost:0,
-        earnAdd:0
+        baseUpgradeCost: 3000,
+        upgradeCost:3000,
+        earnAdd:900
     })
     character.value.push({
         id:6,
@@ -90,9 +91,9 @@ export const useCharacterStore = defineStore('character', () => {
         name:"Worker",
         level:0,
         earn:0,
-        baseUpgradeCost: 10,
-        upgradeCost:0,
-        earnAdd:0
+        baseUpgradeCost: 8000,
+        upgradeCost:8000,
+        earnAdd:2800
     })
     character.value.push({
         id:7,
@@ -100,9 +101,9 @@ export const useCharacterStore = defineStore('character', () => {
         name:"Kim",
         level:0,
         earn:0,
-        baseUpgradeCost: 10,
-        upgradeCost:0,
-        earnAdd:0
+        baseUpgradeCost: 20000,
+        upgradeCost:20000,
+        earnAdd:8000
     })
 
 
@@ -111,11 +112,6 @@ export const useCharacterStore = defineStore('character', () => {
         input.level++
         input.earn += input.earnAdd
         input.upgradeCost += input.baseUpgradeCost
-        //input.earnAdd += 1 * input.id
-
-        /*console.log("upgrade")
-        console.log(input.level)
-        console.log(character.level)*/
     }
 
     return { character, CharacterUpgrade, /*Character*/}

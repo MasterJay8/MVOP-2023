@@ -212,7 +212,7 @@ body .rightWrap .clicker {
   text-align: center;
 }
 body .rightWrap .clicker #clicker {
-  margin-top: 45vh;
+  margin-top: 40vh;
 }
 body .rightWrap .clicker img {
   width: 100%;
@@ -370,7 +370,7 @@ body .rightWrap .navSettings i:active {
     margin-block: 0;
   }
   .all .leftWrap .shopMenu .shopMain .character .upgrade .upgradeCost {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .all .leftWrap .shopMenu .shopMain .character .upgrade .dmgAdd {
     margin-top: 4vh;
