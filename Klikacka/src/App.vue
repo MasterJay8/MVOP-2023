@@ -1,22 +1,26 @@
 <script setup>
+//import { useMounted } from "@vueuse/core";
+import { onMounted, onBeforeUnmount} from "vue";
 import Character from "./components/Character.vue";
-import Level1 from "./components/Level1.vue";
+import Popup from "./components/Popup.vue";
+
 import { useCounterStore } from "./stores/store";
 const useCounter = useCounterStore();
 
 import { useCharacterStore } from "./stores/storeCharacter";
 const useCharacter = useCharacterStore();
 
-//const add = useCounter.addCoins;
-/*export default {
-  components: {
-    Character,
-  },
-};*/
+const earnMoneyPassiveInterval = setInterval(() => {
+  useCounter.earnMoneyPassive();
+}, 1000);
+
+onMounted(useCounter.OfflineEarnings());
+onBeforeUnmount(window.removeEventListener('beforeunload', useCounter.SaveTime()));
 </script>
 
 <template>
   <div class="all">
+    <Popup />
     <div class="leftWrap">
       <div class="coins">
         <div>{{ useCounter.coins }}&nbsp;</div>
@@ -39,7 +43,7 @@ const useCharacter = useCharacterStore();
         </div>
 
         <!-- <Level1/> -->
-        <Character/>
+        <Character />
       </div>
     </div>
     <div class="rightWrap">

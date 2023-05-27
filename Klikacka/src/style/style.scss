@@ -11,6 +11,14 @@ body {
         background-size: cover;
         font-family: 'Roboto', sans-serif;
         display: flex;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+
+    img {
+        -webkit-user-drag: none;
     }
 
     .leftWrap {
@@ -233,11 +241,13 @@ body {
             #clicker {
                 margin-top: 40vh;
                 //text-align: end;
+                cursor: pointer;
             }
 
             img {
                 width: 100%;
                 height: auto;
+                -webkit-user-drag: none;
 
                 &:active {
                     width: 99%;
@@ -344,6 +354,7 @@ body {
                                 margin-top: 4vh;
                                 font-size: 0.65rem;
                             }
+
                             &:active {
                                 margin-block: 0.5vh;
                             }
@@ -375,7 +386,8 @@ body {
                     font-size: 1.9rem;
                 }
             }
-            .clicker{
+
+            .clicker {
                 #clicker {
                     margin-top: 15vh;
                 }
@@ -469,6 +481,7 @@ body {
                                 margin-top: 4vh;
                                 font-size: 0.65rem;
                             }
+
                             &:active {
                                 margin-block: 0.5vh;
                             }

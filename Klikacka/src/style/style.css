@@ -35,6 +35,13 @@ body .all {
   background-size: cover;
   font-family: "Roboto", sans-serif;
   display: flex;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+body img {
+  -webkit-user-drag: none;
 }
 body .leftWrap {
   display: flex;
@@ -213,10 +220,12 @@ body .rightWrap .clicker {
 }
 body .rightWrap .clicker #clicker {
   margin-top: 40vh;
+  cursor: pointer;
 }
 body .rightWrap .clicker img {
   width: 100%;
   height: auto;
+  -webkit-user-drag: none;
 }
 body .rightWrap .clicker img:active {
   width: 99%;
