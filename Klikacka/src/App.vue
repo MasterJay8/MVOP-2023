@@ -1,6 +1,6 @@
 <script setup>
 //import { useMounted } from "@vueuse/core";
-import { onMounted, onBeforeUnmount} from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import Character from "./components/Character.vue";
 import Popup from "./components/Popup.vue";
 
@@ -10,12 +10,19 @@ const useCounter = useCounterStore();
 import { useCharacterStore } from "./stores/storeCharacter";
 const useCharacter = useCharacterStore();
 
+const displayCoins = ref(
+  useCounter.coins.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
+);
+//displayCoins =
+
 const earnMoneyPassiveInterval = setInterval(() => {
   useCounter.earnMoneyPassive();
 }, 1000);
 
 onMounted(useCounter.OfflineEarnings());
-onBeforeUnmount(window.removeEventListener('beforeunload', useCounter.SaveTime()));
+onBeforeUnmount(
+  window.removeEventListener("beforeunload", useCounter.SaveTime())
+);
 </script>
 
 <template>
@@ -24,6 +31,7 @@ onBeforeUnmount(window.removeEventListener('beforeunload', useCounter.SaveTime()
     <div class="leftWrap">
       <div class="coins">
         <div>{{ useCounter.coins }}&nbsp;</div>
+        <div>{{ displayCoins }}&nbsp;</div>
         <i class="fa-solid fa-coins"></i>
       </div>
 
