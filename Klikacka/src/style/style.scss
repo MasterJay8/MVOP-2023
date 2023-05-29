@@ -5,7 +5,7 @@ body {
     .all {
         //background-image: url("../img/sky4.png");
         //background-image: url("../img/sky3.jpg");
-        background-image: url("../img/background1.jpg");
+        background-image: url("/img/background1.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -214,7 +214,7 @@ body {
         .skills {
             display: flex;
             flex-direction: column;
-            color: variables.$skillsColor;
+            color: variables.$skillsButtonColor;
 
             i {
                 display: flex;
@@ -222,7 +222,7 @@ body {
                 justify-content: center;
                 min-height: 5.2vh;
                 min-width: 5.2vh;
-                background-color: variables.$skillsBackgroundColor;
+                background-color: variables.$skillsButtonBackgroundColor;
                 padding: 0.15rem;
                 font-size: 3rem;
                 border: solid 5px;
@@ -260,10 +260,10 @@ body {
         .navSettings {
             display: flex;
             flex-direction: column;
-            color: variables.$settingsColor;
+            color: variables.$settingsButtonColor;
 
             i {
-                background-color: variables.$settingsBackgroundColor;
+                background-color: variables.$settingsButtonBackgroundColor;
                 min-width: 5vh;
                 min-height: 5vh;
                 display: flex;

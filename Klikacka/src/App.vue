@@ -1,37 +1,57 @@
 <script setup>
 //import { useMounted } from "@vueuse/core";
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import { ref, onMounted, onBeforeUnmount, computed } from "vue";
 import Character from "./components/Character.vue";
 import Popup from "./components/Popup.vue";
+import Settings from "./components/Settings.vue";
+import Shop from "./components/Shop.vue";
 
 import { useCounterStore } from "./stores/store";
 const useCounter = useCounterStore();
 
 import { useCharacterStore } from "./stores/storeCharacter";
 const useCharacter = useCharacterStore();
-
-const displayCoins = ref(
-  useCounter.coins.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
+let temp;
+const computedCoins = computed(() =>
+  Math.round(useCounter.coins)
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, " ")
 );
-//displayCoins =
 
 const earnMoneyPassiveInterval = setInterval(() => {
   useCounter.earnMoneyPassive();
-}, 1000);
+}, 50);
+
+const isSettingsOpen = ref(false);
+const openSettings = () => {
+  isSettingsOpen.value = true;
+};
+const closeSettings = () => {
+  isSettingsOpen.value = false;
+};
+const isShopOpen = ref(false);
+const openShop = () => {
+  isShopOpen.value = true;
+};
+const closeShop = () => {
+  isShopOpen.value = false;
+};
 
 onMounted(useCounter.OfflineEarnings());
-onBeforeUnmount(
-  window.removeEventListener("beforeunload", useCounter.SaveTime())
-);
+const SaveTime = setInterval(() => {
+  useCounter.SaveTime();
+}, 10000);
 </script>
 
 <template>
   <div class="all">
     <Popup />
+    <Settings :isOpen="isSettingsOpen" @close="closeSettings" />
+    <Shop :isOpen="isShopOpen" @close="closeShop" />
     <div class="leftWrap">
       <div class="coins">
-        <div>{{ useCounter.coins }}&nbsp;</div>
-        <div>{{ displayCoins }}&nbsp;</div>
+        <!-- <div>{{ useCounter.coins }}&nbsp;</div> -->
+        <div>{{ computedCoins }}&nbsp;</div>
         <i class="fa-solid fa-coins"></i>
       </div>
 
@@ -42,11 +62,11 @@ onBeforeUnmount(
           </button>
 
           <button class="shop">
-            <img src="/src/img/chopsticks.png" alt="" />
+            <img src="/img/chopsticks.png" alt="" />
           </button>
 
           <button class="shop">
-            <img src="/src/img/noodle.png" alt="" />
+            <img src="/img/noodle.png" alt="" />
           </button>
         </div>
 
@@ -56,21 +76,24 @@ onBeforeUnmount(
     </div>
     <div class="rightWrap">
       <div class="skills">
-        <i id="skill" class="fa-solid fa-hand-pointer"></i>
+        <i
+          @click="useCounter.Skill1"
+          id="skill"
+          class="fa-solid fa-hand-pointer"
+        ></i>
         <i id="skill" class="fa-solid fa-coins"></i>
       </div>
       <div class="clicker">
-        <!-- <img id="clicker" src="./img/coin.png" alt="" /> -->
+        <!-- <img id="clicker" src="/img/coin.png" alt="" /> -->
         <img
           id="clicker"
-          src="./img/ramen.png"
-          alt=""
+          src="/img/ramen.png"
           @click="useCounter.addCoins"
         />
       </div>
       <div class="navSettings">
-        <i class="fa-solid fa-gear"></i>
-        <i class="fa-solid fa-cart-shopping"></i>
+        <i @click="openSettings" class="fa-solid fa-gear"></i>
+        <i @click="openShop" class="fa-solid fa-cart-shopping"></i>
       </div>
     </div>
   </div>

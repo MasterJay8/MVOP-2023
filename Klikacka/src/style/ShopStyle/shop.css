@@ -28,27 +28,48 @@ $skillsButtonColor:#EAAC8B;
 $skillsButtonBackgroundColor:#6D597A;
 $settingsButtonColor:#EAAC8B;
 $settingsButtonBackgroundColor:#6D597A;*/
-.popup {
-  width: 20vw;
-  height: 20vh;
+.settings {
+  width: 70vw;
+  height: 70vh;
   border-radius: 5px;
   padding: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 9999;
+  z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: #99582A;
-}
-.popup button {
-  width: 5vw;
-  height: 3vh;
   background-color: #FFE6A7;
+}
+.settings .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vh;
+  padding-block: 1vh;
+  padding-inline: 1vw;
+  background-color: #BB9457;
+  cursor: pointer;
+}
+.settings .item img {
+  height: 10vh;
+}
+.settings .item .buy {
+  background-color: #99582A;
+  padding: 1vh;
+}
+.settings button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 1vh;
+  padding-inline: 1vw;
+  background-color: #BB9457;
   text-decoration: none;
   border: none;
   cursor: pointer;
-}/*# sourceMappingURL=popup.css.map */
+}/*# sourceMappingURL=shop.css.map */

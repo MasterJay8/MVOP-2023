@@ -1,6 +1,7 @@
-import { ref, computed } from 'vue'
+import { ref, computed, onUpdated } from 'vue'
 import { defineStore } from 'pinia'
 import { useLocalStorage } from '@vueuse/core'
+//import {}
 
 import { useCounterStore } from './store';
 
@@ -11,72 +12,72 @@ export const useCharacterStore = defineStore('character', () => {
     let character = ref(useLocalStorage("Character", [
         {
             id: 1,
-            imgPath: "/src/img/Peaseant3.png",
+            imgPath: "/img/peaseant3.png",
             name: "Peaseant",
             level: 0,
             earn: 0,
-            baseUpgradeCost: 10,
-            upgradeCost: 10,
+            baseUpgradeCost: 83,
+            upgradeCost: 100,
             earnAdd: 1
         },
         {
             id: 2,
-            imgPath: "/src/img/asiaGang.png",
+            imgPath: "/img/asiaGang.png",
             name: "Ballers",
             level: 0,
             earn: 0,
-            baseUpgradeCost: 100,
-            upgradeCost: 100,
+            baseUpgradeCost: 552,
+            upgradeCost: 800,
             earnAdd: 15
         },
         {
             id: 3,
-            imgPath: "/src/img/asian3.png",
+            imgPath: "/img/asian3.png",
             name: "Min",
             level: 0,
             earn: 0,
-            baseUpgradeCost: 500,
-            upgradeCost: 500,
+            baseUpgradeCost: 1635,
+            upgradeCost: 2000,
             earnAdd: 100
         },
         {
             id: 4,
-            imgPath: "/src/img/cartman.png",
+            imgPath: "/img/cartman.png",
             name: "Cartman",
             level: 0,
             earn: 0,
-            baseUpgradeCost: 1500,
-            upgradeCost: 1500,
+            baseUpgradeCost: 7326,
+            upgradeCost: 8500,
             earnAdd: 375
         },
         {
             id: 5,
-            imgPath: "/src/img/cityguy2.png",
+            imgPath: "/img/cityguy2.png",
             name: "Cityguy",
             level: 0,
             earn: 0,
-            baseUpgradeCost: 3000,
-            upgradeCost: 3000,
+            baseUpgradeCost: 17848,
+            upgradeCost: 20000,
             earnAdd: 900
         },
         {
             id: 6,
-            imgPath: "/src/img/worker.png",
+            imgPath: "/img/worker.png",
             name: "Worker",
             level: 0,
             earn: 0,
-            baseUpgradeCost: 8000,
-            upgradeCost: 8000,
+            baseUpgradeCost: 46298,
+            upgradeCost: 50000,
             earnAdd: 2800
         },
         {
             id: 7,
-            imgPath: "/src/img/kim.png",
+            imgPath: "/img/kim.png",
             name: "Kim",
             level: 0,
             earn: 0,
-            baseUpgradeCost: 20000,
-            upgradeCost: 20000,
+            baseUpgradeCost: 118952,
+            upgradeCost: 130000,
             earnAdd: 8000
         },
     ]))
@@ -85,12 +86,11 @@ export const useCharacterStore = defineStore('character', () => {
         if (CounterStore.coins >= input.upgradeCost) {
             CounterStore.coins -= input.upgradeCost
             CounterStore.coinsPerSecond += input.earnAdd
-            console.log(input.earnAdd)
-            console.log(CounterStore.coinsPerSecond)
 
             input.level++
             input.earn += input.earnAdd
-            input.upgradeCost += input.baseUpgradeCost
+            //input.upgradeCost += input.baseUpgradeCost
+            input.upgradeCost += input.baseUpgradeCost * 1.2
         }
     }
     return { character, CharacterUpgrade, }

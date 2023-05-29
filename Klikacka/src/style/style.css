@@ -9,10 +9,10 @@ $upgradeBorder:#16425B;
 $scrollColor:#16425B;
 
 //Right Wrap
-$skillsColor:#81C3D7;
-$skillsBackgroundColor:#16425B;
-$settingsColor:#81C3D7;
-$settingsBackgroundColor:#16425B;*/
+$skillsButtonColor:#81C3D7;
+$skillsButtonBackgroundColor:#16425B;
+$settingsButtonColor:#81C3D7;
+$settingsButtonBackgroundColor:#16425B;*/
 /*$coinBackground:#E56B6F;
 $coinBorder:#6D597A;
 $shopBorder:#E56B6F;
@@ -24,12 +24,12 @@ $upgradeBorder:#EAAC8B;
 $scrollColor:#EAAC8B;
 
 //Right Wrap
-$skillsColor:#EAAC8B;
-$skillsBackgroundColor:#6D597A;
-$settingsColor:#EAAC8B;
-$settingsBackgroundColor:#6D597A;*/
+$skillsButtonColor:#EAAC8B;
+$skillsButtonBackgroundColor:#6D597A;
+$settingsButtonColor:#EAAC8B;
+$settingsButtonBackgroundColor:#6D597A;*/
 body .all {
-  background-image: url("../img/background1.jpg");
+  background-image: url("/img/background1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
