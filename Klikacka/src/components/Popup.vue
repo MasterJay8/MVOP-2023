@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import "../style/PopupStyle/popup.css";
+import "../style/PopupStyle/Popup.css";
 
 import { useCounterStore } from "../stores/store";
 const useCounter = useCounterStore();
