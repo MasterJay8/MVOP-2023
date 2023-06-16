@@ -16,7 +16,7 @@ export const useCharacterStore = defineStore('character', () => {
             name: "Peaseant",
             level: 0,
             earn: 0,
-            baseUpgradeCost: 83,
+            baseUpgradeCost: 76,
             upgradeCost: 100,
             earnAdd: 1
         },
@@ -26,7 +26,7 @@ export const useCharacterStore = defineStore('character', () => {
             name: "Ballers",
             level: 0,
             earn: 0,
-            baseUpgradeCost: 552,
+            baseUpgradeCost: 548,
             upgradeCost: 800,
             earnAdd: 15
         },
@@ -90,7 +90,7 @@ export const useCharacterStore = defineStore('character', () => {
             input.level++
             input.earn += input.earnAdd
             //input.upgradeCost += input.baseUpgradeCost
-            input.upgradeCost += input.baseUpgradeCost * 1.2
+            input.upgradeCost += Math.round(input.baseUpgradeCost * 1.2)
         }
     }
     return { character, CharacterUpgrade, }

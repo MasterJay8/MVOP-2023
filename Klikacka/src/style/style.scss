@@ -64,6 +64,7 @@ body {
                     border-style: solid solid none solid;
                     border-top-right-radius: 10px;
                     border-top-left-radius: 10px;
+                    cursor: pointer;
 
                     img {
                         height: 3.4vh;
@@ -159,6 +160,7 @@ body {
                         margin-block: 2.5vh;
                         //padding-top: 1.5vh;
                         position: relative;
+                        cursor: pointer;
 
                         i {
                             stroke: black;
@@ -215,6 +217,7 @@ body {
             display: flex;
             flex-direction: column;
             color: variables.$skillsButtonColor;
+            cursor: pointer;
 
             i {
                 display: flex;
@@ -274,6 +277,7 @@ body {
                 border: solid 3px;
                 border-radius: 50%;
                 margin-block: 0.5vh;
+                cursor: pointer;
 
                 &:active {
                     font-size: 2rem;
