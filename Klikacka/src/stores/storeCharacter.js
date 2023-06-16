@@ -16,7 +16,7 @@ export const useCharacterStore = defineStore('character', () => {
             name: "Peaseant",
             level: 0,
             earn: 0,
-            baseUpgradeCost: 76,
+            baseUpgradeCost: 71,
             upgradeCost: 100,
             earnAdd: 1
         },
