@@ -11,10 +11,13 @@ const showPopup = ref(false);
 
 function closePopup() {
   showPopup.value = false;
-  ///mainContent.style.pointerEvents = "auto";
+  //mainContent.style.pointerEvents = "auto";
 }
 //onMounted((showPopup.value = true, mainContent.style.pointerEvents = 'none'))
-onMounted((showPopup.value = true));
+
+onMounted(() => {
+  showPopup.value = true
+})
 </script>
 
 
